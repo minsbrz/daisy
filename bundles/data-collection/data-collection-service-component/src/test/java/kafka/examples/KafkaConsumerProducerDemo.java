@@ -21,12 +21,14 @@ import org.junit.Test;
 public class KafkaConsumerProducerDemo implements KafkaProperties {
 	
 	@Test
-	public void doRun() {
+	public void doRun() throws InterruptedException {
 		Producer producerThread = new Producer(KafkaProperties.topic);
 		producerThread.start();
 
 		Consumer consumerThread = new Consumer(KafkaProperties.topic);
 		consumerThread.start();
+		
+		Thread.sleep(10000);
 
 	}
 }
