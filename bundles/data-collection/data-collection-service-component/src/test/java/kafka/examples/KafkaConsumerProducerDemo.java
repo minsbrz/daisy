@@ -21,7 +21,7 @@ import org.junit.Test;
 public class KafkaConsumerProducerDemo implements KafkaProperties {
 	
 	@Test
-	public static void main() {
+	public void doRun() {
 		Producer producerThread = new Producer(KafkaProperties.topic);
 		producerThread.start();
 
